@@ -3,7 +3,7 @@
 
 import re
 def integers_in_brackets(s):
-    pattern = r'\[[-\d]+\]'
+    pattern = r'\[\s*?([-+]?\d+)\s*?\]'
     return list(map(int, re.findall(pattern, s)))    
 
 def main():
