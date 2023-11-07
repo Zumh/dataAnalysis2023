@@ -3,7 +3,7 @@
 import numpy as np
 
 def get_row_vectors(a):
-    return []
+    return list(a)
 
 def get_column_vectors(a):
     return []
