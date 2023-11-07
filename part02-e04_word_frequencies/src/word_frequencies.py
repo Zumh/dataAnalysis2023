@@ -3,7 +3,7 @@
 def word_frequencies(filename):
     result = {}
     with open(filename, "r") as file:
-        for input_string in file.split():
+        for input_string in file:
             lines = input_string.split()
             for word in lines:
                 strip_word = word.strip("""!"#$%&'()*,-./:;?@[]_""")
