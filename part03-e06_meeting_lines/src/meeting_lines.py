@@ -2,8 +2,18 @@
 
 import numpy as np
 
+ 
 def meeting_lines(a1, b1, a2, b2):
-    return []
+    # make coeffient for two lines
+    # line1 coefficient-> a1x -y = -b1
+    # line2 coefficient-> a2x -y = -b2
+    line1 = np.array([[a1, -1],[a2, -1]])
+    line2 = np.array([-b1, -b2])
+
+    # then we can calculate intersection point
+    x, y = np.linalg.solve(line1, line2)
+    
+    return x, y
 
 def main():
     a1=1
