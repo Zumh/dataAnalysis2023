@@ -2,6 +2,7 @@
 
 import numpy as np
 
+# y = mx + b
  
 def meeting_lines(a1, b1, a2, b2):
     # make coeffient for two lines
