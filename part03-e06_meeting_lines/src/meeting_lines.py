@@ -8,6 +8,8 @@ def meeting_lines(a1, b1, a2, b2):
     # make coeffient for two lines
     # line1 coefficient-> a1x -y = -b1
     # line2 coefficient-> a2x -y = -b2
+    # -1 is coming from -y
+    # -b1 is coming form = -b1
     line1 = np.array([[a1, -1],[a2, -1]])
     line2 = np.array([-b1, -b2])
 
@@ -15,7 +17,13 @@ def meeting_lines(a1, b1, a2, b2):
     x, y = np.linalg.solve(line1, line2)
     
     return x, y
-
+"""
+def meeting_lines(a1, b1, a2, b2):
+    A=np.array([[-a1,1],[-a2,1]])
+    b=np.array([b1,b2])
+    sol = np.linalg.solve(A, b)
+    return sol
+"""
 def main():
     a1=1
     b1=4
