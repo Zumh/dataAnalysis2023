@@ -20,12 +20,9 @@ def subfigures(a):
     plt.ylabel("scater-y-axis")
     plt.show()
 def main():
-    pass
-    """
     n = 10
     a = np.random.randint(0, 10, (n, 3))
     a = np.concatenate([np.arange(n)[:, np.newaxis], a], axis=1)
-    """
     subfigures(a)
 if __name__ == "__main__":
     main()
