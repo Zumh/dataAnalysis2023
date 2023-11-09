@@ -3,7 +3,15 @@
 import numpy as np
 
 def almost_meeting_lines(a1, b1, a2, b2):
-    return []
+    a = np.array([[a1, -1],[a2, -1]])
+    b = np.array([-b1, -b2])
+    try:
+        intersection_point = np.linalg.solve(a, b)
+        return intersection_point, True
+    except np.linalg.LinAlgError:
+        
+        x, residuals, _, _ = np.linalg.lstsq(a, b, rcond=None)
+        return x, False
 
 def main():
     a1=1
